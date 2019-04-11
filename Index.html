@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .calculator {
+        background-color: darkblue;
+        width: 250px;
+        height: 250px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 5px;
+        padding-bottom: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .Heading {
+        width: 250px;
+        margin:auto;
+        height: 35px;
+        padding-top: 5px;
+        background: crimson;
+        border-radius: 5px;
+    }
+    h3 {
+        text-align: center;
+        color: white;
+        font-size: 30px;
+    }
+    .wrap {
+        width: 250px;
+        margin:auto;
+        height: 210px;
+        padding-top: 5px;
+        background: blue;
+        border-radius: 5px;
+    }
+    input[type=text]{
+        width:98%;
+        font-size:22px;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+    input[type=button]{
+        width:58px;
+        height: 35px;
+        font-size: 22px;
+        font-weight: bold;
+        background-color: blue;
+        color: white;
+        border: none;
+        padding: none
+    }
+    #del {
+        width: 46%;
+    }
+    #enter{
+        width:51%;
+        background: red;
+    }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+    <div class="Heading">
+        
+        <h3> CALCULATOR </h3>
+    </div>
+    <div class="wrap">
+            
+        <form name="calc">
+            <input type="text" name="display">
+            <br>
+            <input type="button" value="+" onclick="calc.display.value+='+'">
+            <input type="button" value="-" onclick="calc.display.value+='-'">
+            <input type="button" value="*" onclick="calc.display.value+='*'">
+            <input type="button" value="/" onclick="calc.display.value+='/'">
+            <br>
+            <input type="button" value="7" onclick="calc.display.value+='7'">
+            <input type="button" value="8" onclick="calc.display.value+='8'">
+            <input type="button" value="9" onclick="calc.display.value+='9'">
+            <input type="button" value="0" onclick="calc.display.value+='0'">
+            <br>
+            <input type="button" value="4" onclick="calc.display.value+='4'">
+            <input type="button" value="5" onclick="calc.display.value+='5'">
+            <input type="button" value="6" onclick="calc.display.value+='6'">
+            <input type="button" value="." onclick="calc.display.value+='.'">
+            <br>
+            <input type="button" value="1" onclick="calc.display.value+='1'">
+            <input type="button" value="2" onclick="calc.display.value+='2'">
+            <input type="button" value="3" onclick="calc.display.value+='3'">
+            <input type="button" value="%" onclick="calc.display.value+='%'">
+            <br>
+            <input type="button" value="DELETE" onclick="calc.display.value=''" id="del">
+            <input type="button" value="=" onclick="calc.display.value = eval(calc.display.value)" id="enter">
+        </form>
+
+    </div>
+    </div>
+
+</body>
+</html>
